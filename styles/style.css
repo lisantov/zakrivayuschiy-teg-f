@@ -296,6 +296,10 @@ main {
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
+  outline: none;
   box-shadow: 2px 2px var(--accent-color);
 }
 
@@ -334,14 +338,12 @@ main {
 
 .floppy {
   mix-blend-mode: difference;
+  inline-size: 21px;
   fill: var(--invert-color);
   stroke: var(--invert-color);
-  z-index: 1;
 }
 
 .dialog {
-  position: fixed;
-  inset: 0;
   padding: 30px;
   inline-size: clamp(22.063rem, -1.127vw + 22.327rem, 21.313rem);
   text-transform: uppercase;
@@ -368,7 +370,7 @@ main {
   align-items: center;
 }
 
-.dialog__icon {
+.dialog .floppy {
   inline-size: 40px;
   flex-shrink: 0;
 }
