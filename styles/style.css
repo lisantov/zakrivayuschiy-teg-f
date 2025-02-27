@@ -10,12 +10,6 @@
 
 */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -344,6 +338,8 @@ main {
 }
 
 .dialog {
+  position: fixed;
+  inset: 0;
   padding: 30px;
   inline-size: clamp(22.063rem, -1.127vw + 22.327rem, 21.313rem);
   text-transform: uppercase;
