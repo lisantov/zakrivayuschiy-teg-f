@@ -20,7 +20,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--main-text-weight);
+  font-variation-settings: "wght" var(--main-text-weight);
   background-image: var(--background);
   background-size: cover;
   background-position: center;
@@ -42,7 +42,6 @@
   text-align: center;
   font-family: var(--accent-font);
 }
-
 
 .header__title {
   font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
@@ -74,7 +73,7 @@ main {
 }
 
 .card__title {
-  font-variation-settings: 'wght' var(--card-header-weight);
+  font-variation-settings: "wght" var(--card-header-weight);
   font-size: 18px;
   line-height: 21.78px;
   margin-inline-start: 10px;
@@ -128,8 +127,7 @@ main {
 .card__watermark {
   position: absolute;
   color: #000;
-  text-shadow: 
-    1px 0px var(--watermark-stroke-color),
+  text-shadow: 1px 0px var(--watermark-stroke-color),
     0px 1px var(--watermark-stroke-color),
     -1px 0px var(--watermark-stroke-color),
     0px -1px var(--watermark-stroke-color);
@@ -142,7 +140,10 @@ main {
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px var(--watermark-stroke-color)) or (-webkit-text-stroke: 1px var(--watermark-stroke-color))) {
+@supports (
+  (text-stroke: 1px var(--watermark-stroke-color)) or
+    (-webkit-text-stroke: 1px var(--watermark-stroke-color))
+) {
   .card__watermark {
     -webkit-text-stroke: 1px var(--watermark-stroke-color);
     text-stroke: 1px var(--watermark-stroke-color);
@@ -262,7 +263,6 @@ main {
   }
   50% {
     transform: scale(1.25);
-
   }
   100% {
     transform: scale(1);
@@ -275,7 +275,6 @@ main {
   }
   50% {
     opacity: 1;
-
   }
   100% {
     opacity: 0;
@@ -301,7 +300,7 @@ main {
 }
 
 .button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: var(--accent-color);
@@ -310,7 +309,7 @@ main {
   transition: transform 0.5s ease-in-out;
 }
 
-.button:hover::before{
+.button:hover::before {
   transform: translateX(0);
 }
 
@@ -359,7 +358,7 @@ main {
 }
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.75  )
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .dialog__text-container {
