@@ -39,14 +39,14 @@
 
 .header__title {
   font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
-  line-height: 65px;
+  line-height: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .header__description {
   font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
-  line-height: 23px;
+  line-height: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
   text-transform: uppercase;
 }
 
@@ -70,7 +70,7 @@ main {
   font-variation-settings: "wght" var(--card-header-weight);
   font-size: 18px;
   line-height: 21.78px;
-  margin-inline-start: 10px;
+  margin-inline: 10px;
   padding-block: 5px;
 }
 
@@ -166,11 +166,12 @@ main {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   margin-block-start: 25px;
 }
 
 .card__icon-button {
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,17 +196,17 @@ main {
 
 .core {
   fill: transparent;
-  transition: 0.3s 0.03s;
+  transition: linear 0.3s 0.03s;
 }
 
 .main-body {
   fill: transparent;
-  transition: 0.3s;
+  transition: linear 0.3s;
 }
 
 .contour {
   fill: var(--heart-contour-color);
-  transition: 0.3s;
+  transition: linear 0.1s;
 }
 
 .card__icon-button:hover .core {
@@ -240,7 +241,7 @@ main {
 
 .like-icon.is-liked .contour {
   fill: var(--heart-body-color);
-  transition: fill linear 0.1s;
+  transition: fill linear 0.3s 0.06s;
 }
 
 .like-icon.is-liked .heart {
@@ -251,35 +252,15 @@ main {
   animation: splash 1 0.3s 0.3s ease-in;
 }
 
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes splash {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .card__like-button {
   padding: 12.5px 37px;
+  max-inline-size: 130px;
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-color: transparent;
   border: 2px solid var(--accent-color);
@@ -334,14 +315,13 @@ main {
   mix-blend-mode: difference;
   inline-size: 21px;
   fill: var(--invert-color);
-  stroke: var(--invert-color);
 }
 
 .dialog {
   position: fixed;
   inset: 0;
   padding: 30px;
-  inline-size: clamp(22.063rem, -1.127vw + 22.327rem, 21.313rem);
+  inline-size: clamp(341px, 1.501vw + 20.962rem, 357px);
   text-transform: uppercase;
 }
 
@@ -367,7 +347,7 @@ main {
 }
 
 .dialog .floppy {
-  inline-size: 40px;
+  inline-size: 39px;
   flex-shrink: 0;
 }
 
@@ -383,16 +363,21 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12.5px;
+  padding: 11px;
   inline-size: 100%;
+  text-transform: uppercase;
 }
 
 @media (width <= 375px) {
-  .card__icon-button {
+  .card__save-button {
     flex-direction: column;
+  }
+  
+  .floppy {
+    inline-size: 28px;
   }
 
   .dialog {
-    padding: 30px 42px;
+    padding: 30px 38px;
   }
 }
