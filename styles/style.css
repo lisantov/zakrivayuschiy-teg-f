@@ -34,7 +34,7 @@
   flex-direction: column;
   gap: 20px;
   text-align: center;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
 }
 
 .header__title {
@@ -125,7 +125,7 @@ main {
     0px 1px var(--watermark-stroke-color),
     -1px 0px var(--watermark-stroke-color),
     0px -1px var(--watermark-stroke-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   inset-block-start: 25px;
   inset-inline-end: clamp(0.813rem, 1.127vw + 0.548rem, 1.563rem);
   font-size: 14px;
@@ -294,7 +294,7 @@ main {
 
 .button__text {
   display: block;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   line-height: 12.6px;
   color: var(--invert-color);
@@ -353,7 +353,7 @@ main {
 
 .dialog__text {
   flex-shrink: 1;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
