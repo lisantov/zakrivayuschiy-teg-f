@@ -154,7 +154,6 @@ main {
 .card__description p {
   font-size: 18px;
   line-height: 21px;
-  text-shadow: 1px 1px 1px #ff0000;
 }
 
 .card__description p + p {
